@@ -10,6 +10,9 @@ desc: "<% `Daily Note for ${prettifiedDate}` %>"
 updated: 
 created: <% tp.file.creation_date("X") %>
 day: <% `${dateShorthand}` %>
+up: "<% `[[${tp.date.now("GGGG-[W]WW")}]]`%>"
+prev: "<% `[[${tp.date.yesterday("YYYY-MM-DD")}]]` %>"
+next: "<% `[[${tp.date.tomorrow("YYYY-MM-DD")}]]` %>"
 ---
 
 # <% `${prettifiedDate}` %>

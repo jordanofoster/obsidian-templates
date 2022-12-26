@@ -10,6 +10,9 @@ desc: "<% `Quarterly Note for the ${prettifiedDate}` %>"
 updated: 
 created: <% tp.file.creation_date("X") %>
 quarter: <% `${dateShorthand}` %>
+up: "<% `[[${tp.date.now("YYYY")}]]` %>"
+prev: "<% `[[${moment().subtract(1,"Q").format("YYYY-[Q]Q")}]]` %>"
+next: "<% `[[${moment().add(1,"Q").format("YYYY-[Q]Q")}]]` %>"
 ---
 
 # <% `${prettifiedDate}` %>

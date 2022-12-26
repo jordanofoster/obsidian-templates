@@ -10,6 +10,8 @@ desc: "<% `Yearly Note for ${prettifiedDate}` %>"
 updated: 
 created: <% tp.file.creation_date("X") %>
 year: <% `${dateShorthand}` %>
+prev: "<% `[[${moment().subtract(1,"y").format("YYYY")}]]` %>"
+next: "<% `[[${moment().add(1,"y").format("YYYY")}]]` %>"
 ---
 
 # <% `${prettifiedDate}` %>
