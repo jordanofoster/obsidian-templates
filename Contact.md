@@ -21,8 +21,8 @@
 _%>
 ---
 id: <% zettelID %>
-title: "<% `${noteTitle}` %>"
-desc: "<% `${noteDesc}` %>"
+title: "<% noteTitle %>"
+desc: "<% noteDesc %>"
 updated: 
 created: <% tp.file.creation_date("X") %>
 details:
@@ -31,4 +31,4 @@ details:
   organization: <% contactOrg %>
 ---
 
-# <% `${noteTitle}` %>
+# <% noteTitle %>

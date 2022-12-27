@@ -2,14 +2,14 @@
 	let zettelID = tp.date.now("YYYYMMDDHHmmss");
 	let noteTitle = await tp.system.prompt("Title",null,true);
 	let noteDesc = await tp.system.prompt("Description",null,true);
-	await tp.file.rename(`${zettelID}`);
+	await tp.file.rename(zettelID);
 _%>
 ---
-id: <% `${zettelID}` %>
-title: "<% `${noteTitle}` %>"
-desc: "<% `${noteDesc}` %>"
+id: <% zettelID %>
+title: "<% noteTitle %>"
+desc: "<% noteDesc %>"
 updated: 
 created: <% tp.file.creation_date("X") %>
 ---
 
-# <% `${noteTitle}` %>
+# <% noteTitle %>
