@@ -14,7 +14,7 @@ year: <% dateShorthand %>
 prev: "<% `[[${moment().subtract(1,"y").format("YYYY")}]]` %>"
 next: "<% `[[${moment().add(1,"y").format("YYYY")}]]` %>"
 tags:
-	- journal
+- journal
 ---
 
 # <% prettifiedDate %>

@@ -15,7 +15,7 @@ up: "<% `[[${tp.date.now("YYYY")}]]` %>"
 prev: "<% `[[${moment().subtract(1,"Q").format("YYYY-[Q]Q")}]]` %>"
 next: "<% `[[${moment().add(1,"Q").format("YYYY-[Q]Q")}]]` %>"
 tags:
-	- journal
+- journal
 ---
 
 # <% prettifiedDate %>

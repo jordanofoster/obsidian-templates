@@ -1,6 +1,6 @@
 <%*
 	let zettelID = tp.date.now("YYYYMMDDHHmmss");
-	let noteTitle = await tp.system.prompt("Title",null,true);
+	let noteTitle = await tp.system.prompt("Title",tp.file.title,true);
 	let noteDesc = await tp.system.prompt("Description",null,true);
 	await tp.file.rename(zettelID);
 _%>

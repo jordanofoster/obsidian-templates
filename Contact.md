@@ -1,17 +1,17 @@
 <%*
 	let zettelID = tp.date.now("YYYYMMDDHHmmss");
-	let noteTitle = await tp.system.prompt("Title",null,true);
+	let noteTitle = await tp.system.prompt("Title",tp.file.title,true);
 	let noteDesc = await tp.system.prompt("Description",`Page for contact - ${noteTitle}`,true);
-	await tp.file.rename(`${zettelID}`);
+	await tp.file.rename(zettelID);
 
 	let contactEmail = await tp.system.prompt("Email");
 	if (contactEmail != null) {
-		contactEmail = `\"${contactEmail}\"`
+		contactEmail = `\"[${contactEmail}](mailto://${contactEmail})\"`
 	}
 
 	let contactPhone = await tp.system.prompt("Phone");
 	if (contactPhone != null) {
-		contactPhone = `\"${contactPhone}\"`
+		contactPhone = `\"[${contactPhone}](tel://${contactPhone})\"`
 	}
 
 	let contactOrg = await tp.system.prompt("Organization");
