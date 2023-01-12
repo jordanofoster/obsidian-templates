@@ -1,4 +1,11 @@
 <%*
+    let classificationList = [
+        "PUBLIC",
+        "PERSONAL",
+        "PRIVATE",
+        "SECRET"
+    ];
+
 	let zettelID = tp.date.now("YYYYMMDDHHmmss");
 	let dateShorthand = tp.date.now("GGGG-[W]WW");
 	let prettifiedDate = tp.date.now("wo [Week of] YYYY");
@@ -8,6 +15,7 @@ _%>
 id: <% zettelID %>
 title: "<% prettifiedDate %>"
 desc: "<% `Weekly Note for the ${prettifiedDate}` %>"
+classification: <% `"[[${await tp.system.suggester(classificationList,classificationList,true,"CLASSIFICATION")}]]"` %>
 updated: 
 created: <% tp.file.creation_date("X") %>
 week: <% dateShorthand %>

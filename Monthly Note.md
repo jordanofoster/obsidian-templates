@@ -1,5 +1,12 @@
 <%*
-	let zettelID = tp.date.now("YYYYMMDDHHmmss");
+	let classificationList = [
+        "PUBLIC",
+        "PERSONAL",
+        "PRIVATE",
+        "SECRET"
+    ];
+    
+    let zettelID = tp.date.now("YYYYMMDDHHmmss");
 	let dateShorthand = tp.date.now("YYYY-MM");
 	let prettifiedDate = tp.date.now("MMMM YYYY");
 	await tp.file.rename(dateShorthand);
@@ -8,6 +15,7 @@ _%>
 id: <% zettelID %>
 title: "<% prettifiedDate %>"
 desc: "<% `Monthly Note for ${prettifiedDate}` %>"
+classification: <% `"[[${await tp.system.suggester(classificationList,classificationList,true,"CLASSIFICATION")}]]"` %>
 updated: 
 created: <% tp.file.creation_date("X") %>
 month: <% dateShorthand %>

@@ -8,6 +8,7 @@ _%>
 id: <% zettelID %>
 title: "<% noteTitle %>"
 desc: "<% noteDesc %>"
+classification: <% `"[[${await tp.system.suggester(classificationList,classificationList,true,"CLASSIFICATION")}]]"` %>
 updated: 
 created: <% tp.file.creation_date("X") %>
 ---
