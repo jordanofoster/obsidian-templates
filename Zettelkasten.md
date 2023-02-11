@@ -1,4 +1,11 @@
 <%*
+    let classificationList = [
+        "PUBLIC",
+        "PERSONAL",
+        "PRIVATE",
+        "SECRET"
+    ];
+    
 	let zettelID = tp.date.now("YYYYMMDDHHmmss");
 	let noteTitle = await tp.system.prompt("Title",tp.file.title,true);
 	let noteDesc = await tp.system.prompt("Description",null,true);
